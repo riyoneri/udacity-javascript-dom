@@ -1,3 +1,7 @@
-const nanoDegreCard = document.querySelector(".card")
+document.addEventListener("click", () => {
+    console.log("Document clicked")
+})
 
-console.log(document.querySelector(".card"))
+document.body.addEventListener("click", () => {
+    console.log("body clicked")
+})
