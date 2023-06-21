@@ -1,17 +1,13 @@
-const myCustomDiv = document.createElement("div")
+const myCustomArticle = document.createElement("article")
 
-const respondToTheClick = evt => {
-    console.log(evt.target)
-    console.log("A paragraph was clicked")
-}
+myCustomArticle.innerHTML = `
+<p>Brownie lollipop <span>carrot cake</span> gummies lemon drops sweet roll dessert tiramisu. Pudding muffin <span>cotton candy</span> croissant fruitcake tootsie roll. Jelly jujubes brownie. Marshmallow jujubes topping sugar plum jelly jujubes chocolate.</p>
 
-for (let i = 1; i <= 200; i++) {
-    const newElement = document.createElement('p');
-    newElement.textContent = 'This is paragraph number ' + i;
+    <p>Tart bonbon soufflé gummi bears. Donut marshmallow <span>gingerbread cupcake</span> macaroon jujubes muffin. Soufflé candy caramels tootsie roll powder sweet roll brownie <span>apple pie</span> gummies. Fruitcake danish chocolate tootsie roll macaroon.</p>
+`
 
-    myCustomDiv.appendChild(newElement);
-}
+myCustomArticle.addEventListener('click', e => {
+    if (e.target.nodeName === "SPAN") console.log("Span clicked " + e.target.textContent)
+})
 
-myCustomDiv.addEventListener("click", respondToTheClick)
-
-document.body.appendChild(myCustomDiv);
+document.body.appendChild(myCustomArticle)
