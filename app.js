@@ -1,7 +1,3 @@
-document.addEventListener("click", () => {
-    console.log("Document clicked")
-})
-
-document.body.addEventListener("click", () => {
-    console.log("body clicked")
+document.addEventListener("click", event => {
+    console.log(event)
 })
